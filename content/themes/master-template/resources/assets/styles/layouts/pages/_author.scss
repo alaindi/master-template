@@ -1,0 +1,16 @@
+#author {
+  background: url("../images/author-bg.png") center center no-repeat;
+  background-size: cover;
+  padding: 70px 0;
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+
+  .text-cont {
+  	@include media-breakpoint-down(md) {
+  		margin: 50px 0;
+	    text-align: center;
+	  }
+  }
+}

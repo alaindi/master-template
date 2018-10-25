@@ -1,0 +1,66 @@
+#order {
+  padding: 70px 0;
+  background: url("../images/excerpts-bg.png") center center no-repeat;
+  background-size: cover;
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+
+  @media (min-width: 1540px) {
+    background: url(../images/excerpts-bg.png) 50% 40% no-repeat;
+    background-size: cover;
+  }
+
+  .book-type {
+    padding: 0 0 30px;
+
+    @media (max-width: 1200px) {
+      text-align: center;
+    }
+
+    a {
+      margin: 5px 10px 5px 0;
+    }
+  }
+
+  .book-store {
+    @media (max-width: 1200px) {
+      text-align: center;
+    }
+
+    p {
+      padding: 0 0 10px;
+      font-size: 16px;
+      display: block;
+      margin-right: 20px;
+      margin-top: 12px;
+      float: left;
+
+      @include media-breakpoint-down(xs) {
+        float: none;
+      }
+    }
+
+    img {
+      &:hover {
+        -webkit-transform: scale(1.05, 1.07);
+        -webkit-transition-timing-function: ease-out;
+        -webkit-transition-duration: 0.25s;
+        -moz-transform: scale(1.05, 1.07);
+        -moz-transition-timing-function: ease-out;
+        -moz-transition-duration: 0.25s;
+      }
+    }
+
+    a.amazon {
+      padding-top: 10px;
+    }
+
+    a {
+      display: inline-block;
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+    }
+  }
+}

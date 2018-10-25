@@ -1,0 +1,120 @@
+#banner {
+  min-height: 800px;
+  background: url("../images/banner-bg.png") center center;
+
+  @media (min-width: 1540px) {
+    background: url(../images/banner-bg.png) 50% 60%;
+    background-size: cover;
+  }
+
+  .content-wrapper {
+    text-align: center;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+      @extend .banner-h1;
+    }
+
+    h2 {
+      @extend .banner-h2;
+    }
+
+    img.banner-title {
+      display: block;
+      margin: 75px auto;
+    }
+
+    .btn-style {
+      @include box-shadow (0 0 10px rgba(0, 0, 0, 0.5));
+
+      @extend .banner-button;
+    }
+  }
+}
+
+#book-review,
+#book-review2 {
+  padding: 70px 0;
+  background: url("../images/book-review-bg.png") center center no-repeat;
+  background-size: cover;
+
+  @media (min-width: 1540px) {
+    background: url(../images/book-review-bg.png) 10% 90% no-repeat;
+    background-size: cover;
+  }
+
+  .review-wrapper {
+    background: $white;
+    margin: 0 100px;
+    padding: 30px;
+    text-align: center;
+    -webkit-box-shadow: 0 0 25 0 rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 0 25 0 rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 25 0 rgba(0, 0, 0, 0.35);
+
+    @include media-breakpoint-down(md) {
+      margin: 0;
+    }
+
+    h2 {
+      @media (max-width: 500px) {
+        font-size: 40px;
+      }
+    }
+
+    .review-cont {
+      padding: 0 0 45px;
+
+      p {
+        min-height: 133px;
+
+        @media (min-width: 450px) and (max-width: 767.98px) {
+          min-height: 187px;
+        }
+
+        @media (max-width: 450px) {
+          min-height: 295px;
+        }
+      }
+    }
+  }
+
+  .carousel-inner {
+    width: 70%;
+    margin: 0 auto;
+
+    .review-cont {
+      min-height: 145px;
+    }
+  }
+
+  .carousel-indicators {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    position: static;
+
+    li {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 3px;
+      border-radius: 50%;
+      background: $bg3;
+      padding: 0;
+    }
+
+    li.active {
+      background: #cf3f50;
+    }
+  }
+}
+
+#book-review2 {
+  padding: 70px 0;
+}
